@@ -1,50 +1,28 @@
-# MyStore
+# MyFirstApp
 
-MyStore is Angular application created for a Udacity project, that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
+ my first app is an Angular application created for a Udacity project, that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
 
-## Getting Started
+## Development server
 
-To use these files, simply merge the folders into the root directory of your scaffolded Angular application.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Project Instructions
+## Code scaffolding
 
-### Setup
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Make sure to have Angular setup on your machine. You can find setup instructions on their website here. [https://angular.io](https://angular.io)
+## Build
 
-### yarn install
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Installs required dependencies.
+## Running unit tests
 
-### ng serve
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Runs the app and can be viewed at [http://localhost:4200](http://localhost:4200)
+## Project Structure
+  - Product list page, which displays the available products for the user to choose and add to their  cart
+  - Product details page, which displays more information about any particular product
+  - Shopping cart, which includes the products that the user has added to their cart
+  - Checkout form, which collects information about the user (e.g., name, address, payment details, etc.)
+  - Order confirmation page, which shows the outcome after the user completes the checkout process 
+  - data.json. Project fetches product information from this included file to populate the store.
 
-### ng test
-
-**Tests are not currently setup.**
-Spec files are created for components, but they are not fleshed out, so tests currently don't 'test' anything.
-
-### ng build
-
-Builds the app for production to the `dist` folder.
-
-### ng watch
-
-Runs the app and can be viewed at [http://localhost:4200](http://localhost:4200)
-
-#### Project Structure
-
-- **Product list** page, which displays the available products for the user to choose and add to their cart (in various quantities)
-- **Product details** page, which displays more information about any particular product
-- **Shopping cart**, which includes the products that the user has added to their cart
-- **Checkout form**, which collects information about the user (e.g., name, address, payment details, etc.)
-- **Order confirmation page**, which shows the outcome after the user completes the checkout process (i.e., submits the checkout form)
-
-- `data.json`. Project fetches product information from this included file to populate the store.
-
-![MyStore shopping flow](shoppingflow.gif)
-
-## License
-
-[License](LICENSE.txt)
