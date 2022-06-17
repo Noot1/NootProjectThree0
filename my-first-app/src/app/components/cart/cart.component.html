@@ -43,25 +43,32 @@
       <form class="form-margin" #form="ngForm" (ngSubmit)="onSubmitOrder()">
         <p>Full Name</p>
         <input
+        placeholder="required-enter 5 characters only"
           type="text"
           name="fullName"
           id="fullName"
           required
           minlength="5"
+          maxlength="5"
+          size="5"
           [(ngModel)]="fullName"
         />
         <p>Address</p>
         <input
+        placeholder="required-enter 10 characters only"
           type="text"
           name="address"
           id="address"
           required
           minlength="10"
+          maxlength="10"
+         size="10"
           [(ngModel)]="address"
         />
         <p>Credit Card Number</p>
         <input
-          type="text"
+        placeholder="required-enter numbers only "
+          type="number"
           name="ccNum"
           id="ccNum"
           required
@@ -69,6 +76,7 @@
           maxlength="16"
           inputmode="numeric"
           pattern="^[0-9]*$"
+          size="16"
           [(ngModel)]="ccNum"
         />
         <br />

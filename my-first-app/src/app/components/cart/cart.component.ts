@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
 
   fullName!: string;
   address!: string;
-  ccNum!: string;
+  ccNum!: number;
   totalPrice: number = 0;
   orderInfo!: OrderInfo;
 
@@ -64,6 +64,15 @@ export class CartComponent implements OnInit {
     );
     this.cartService.setCart(this.productsInCart);
     alert(`${cartItem.name} has been removed from your cart.`);
+    
+    this.totalPrice = 0;
+    for (let int = 0; int < this.productsInCart.length; int++) {
+      let quantity = this.productsInCart[int].quantity;
+      if (!quantity) {
+        quantity = 1;
+      }
+      this.totalPrice += this.productsInCart[int].price * quantity;
+    }
   }
 
   /**
@@ -82,7 +91,7 @@ export class CartComponent implements OnInit {
     this.productsInCart = this.cartService.setCartToEmpty();
     this.fullName = '';
     this.address = '';
-    this.ccNum = '';
+    this.ccNum = 0;
     this.totalPrice = 0;
   }
 }
